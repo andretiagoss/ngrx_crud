@@ -1,0 +1,59 @@
+Angular NgRx Course 
+-------------------
+
+1 - Introduction & Redux
+  - State
+    - Representation of application
+    - Can be user information
+    - User input and selection 
+    - Data we get from the server
+    - View/UI state
+    - Location or router state
+    - Other information that our application tracks
+    - Object with all information that application needs.
+	
+ - Redux
+   It's a desing pattern based on 3 core principles:
+   1 - Single source of truth (store)
+       Everything that changes in your application, including the data and the UI state, is contained in a single object, 
+	   we call the state or the state tree.
+   
+   2 - The state is ready only (immutable)
+       The only way to change the state tree is by dispatching an action. 
+	   An action is a plain Javascript object, describing in the minimal way what changed in the application.
+ 
+   3 - All changes in the state are made by pure functions called Reducers 
+   
+2 - Introduction to NgRx
+  NgRx is a framework for building reactive applications in Angular.
+  - Store 
+    - RxJS powered global state management for Angular apps, inspired by Redux.
+	- Single source of truth.
+	- Components subscribe to changes in the state.
+	- Information that needs to be shared between components should go to the store.
+	- Database in the front-end.
+	- Provides a cache, to component don't need to connect to the server every time that initialize.
+  
+  - Libraries	
+    - @ngrx/store: The core library.
+	- @ngrx/effects: Used to handle side effects such as communication with a back-end server
+	- @ngrx/router-store: To connect the angular router to ngrx store.
+	- @ngrx/entity: Used to manage record collections.
+	- @ngrx/store-devtools: Allows us to inspect and debug the application.
+	- @ngrx/schematics: Scaffolding library that provides CLI commands to generates files.
+    
+  - Effects: Side effect model for @ngrx/store.
+  - Router Store: Bindings to connect the Angular Router to @ngrx/store.
+  - Entity: Entity State adapter for managing record collections.
+  - Component Store: Standalone library for managing local/component state.
+  - Selectors: Are functions that subscribe slices of the states and comunicate the changes to the component.  
+  
+3 - Application setup
+    npm install @ngrx/store@14.0.1 --force
+    npm install @ngrx/store-devtools@14.0.1 --force
+	npm install @ngrx/effects@14.0.1 --force
+	npm install @ngrx/entity@14.0.1 --force
+	npm install @ngrx/router-store@14.0.1 --force
+  
+  
+  
