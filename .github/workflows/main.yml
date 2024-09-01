@@ -1,11 +1,11 @@
-name: 1 - Usage of repository-dispatch GitHub Action
+name: 1 - Orchestrator
 on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - test
 jobs:
-  deploy:
+  Orchestrator:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
