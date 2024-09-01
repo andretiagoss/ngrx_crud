@@ -2,6 +2,11 @@ name: 2 - Repository Dispatch
 on:
   repository_dispatch:
     types: [my-event]
+
+permission:
+  id-token: write
+  contents: read
+ 
 jobs:
   myEvent:
     runs-on: ubuntu-latest
