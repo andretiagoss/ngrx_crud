@@ -4,7 +4,7 @@ on:
     
   push:
     branches:
-      - test
+      - dev
 jobs:
   Orchestrator:
     runs-on: ubuntu-latest
