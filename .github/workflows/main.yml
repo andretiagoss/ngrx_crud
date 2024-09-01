@@ -1,4 +1,4 @@
-name: '1 - Usage of repository-dispatch GitHub Action'
+name: 1 - Usage of repository-dispatch GitHub Action
 on:
   workflow_dispatch:
   push:
@@ -12,4 +12,6 @@ jobs:
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v3
       with:
+        token: ${{ secrets.WORKFLOW_TOKEN }}
+        repository: ${{ github.repository }}
         event-type: my-event
