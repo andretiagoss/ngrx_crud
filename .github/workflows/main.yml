@@ -1,6 +1,7 @@
 name: 1 - Orchestrator
 on:
   workflow_dispatch:
+    
   push:
     branches:
       - test
@@ -12,6 +13,6 @@ jobs:
     - name: Repository Dispatch
       uses: peter-evans/repository-dispatch@v3
       with:
-        token: ${{ secrets.WORKFLOW_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         repository: ${{ github.repository }}
         event-type: my-event
