@@ -1,14 +1,14 @@
-name: 'Usage of repository-dispatch GitHub Action'
+name: '1 - Usage of repository-dispatch GitHub Action'
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v4
-        - name: Repository Dispatch
-          uses: peter-evans/repository-dispatch@v3
-          with:
-            event-type: my-event
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Repository Dispatch
+      uses: peter-evans/repository-dispatch@v3
+      with:
+        event-type: my-event
