@@ -6,6 +6,11 @@ on:
     branches:
       - dev
 jobs:
+  reusable-workflow:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      branch: ${{ github.ref_name }}
+
   Orchestrator:
     runs-on: ubuntu-latest
     steps:
