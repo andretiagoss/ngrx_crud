@@ -9,7 +9,7 @@ on:
         type: string
 
 jobs:
-  build:
+  reusable:
     runs-on: ubuntu-latest
 
     steps:
