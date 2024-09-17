@@ -7,7 +7,7 @@ on:
       - main
 jobs:
   reusable-workflow:
-    uses: ./.github/workflows/reusable-workflow.yml
+    uses: ./.github/workflows/reusable-workflow.yml@${{github.ref_name}}
     with:
       branch: ${{ github.ref_name }}
 
