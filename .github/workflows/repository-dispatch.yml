@@ -11,3 +11,8 @@ jobs:
         with:
           ref: ${{ github.event.client_payload.ref }}
       - run: echo ${{ github.event.client_payload.sha }}
+      
+  reusable-workflow:
+    uses: ./.github/workflows/reusable-workflow_dispatch.yml
+    with:
+      branch: ${{ github.ref_name }}          

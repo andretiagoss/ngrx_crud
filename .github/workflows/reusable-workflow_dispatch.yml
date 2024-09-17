@@ -1,0 +1,16 @@
+name: Reusable Build and Test
+
+on:
+  workflow_call:
+    inputs:
+      branch:
+        description: 'Branch name'
+        required: true
+        type: string
+
+jobs:
+  reusable:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo branch ${{ inputs.branch }}

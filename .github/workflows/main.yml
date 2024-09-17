@@ -1,11 +1,17 @@
-name: 1 - Usage of repository-dispatch GitHub Action
+name: 1 - Orchestrator
 on:
   workflow_dispatch:
+    
   push:
     branches:
-      - main
+      - dev
 jobs:
-  deploy:
+  reusable-workflow:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      branch: ${{ github.ref_name }}
+
+  Orchestrator:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
